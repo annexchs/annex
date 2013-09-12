@@ -73,6 +73,7 @@ h3 {
   padding-top: 1.5em;
   padding-bottom: 10px;
 }
+
 .btn {
   font-weight: 800;
   border: none;
@@ -408,4 +409,23 @@ h3 {
 }
 .modal p {
   color: #FFFFFF;
+  font-size: 18px;
+  line-height: 1.428;
+}
+
+.modal a:link, .modal a:visited {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: none;
+  color: #FFFFFF;
+}
+
+.modal a:hover {
+  color: #FFFFFF;
+  border-bottom: 1.5px #FFFFFF dashed;
+}
+
+.build {
+  font-size: 30px;
+  font-weight: normal;
 }
