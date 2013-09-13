@@ -81,22 +81,33 @@ background-color: transparent;
 background-image: url("../images/hex-indicator-active.png");
 }
 
-.carousel-caption {
-position: absolute;
-right: 0;
-bottom: 20px;
-left: 40%;
-z-index: 10;
-padding-top: 1em;
-padding-bottom: 1em;
-padding-left:2em;
-padding-right:2em;
-color: #ffffff;
-text-align: left;
-background: rgb(147,105,166);
-text-shadow: none;
--webkit-font-smoothing: antialiased;
+.carousel-caption, .caption-background {
+  position: absolute;
+  bottom: 20px;
+  left: 45%;
+  right: 0;
+  z-index: 10;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left:3em;
+  padding-right:2em;
+  color: #ffffff;
+  text-align: left;
+  text-shadow: none;
+  -webkit-font-smoothing: antialiased;
 }
+
+.caption-background {
+  height:220px;
+  left:100%;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.caption-active {
+  left:45%;
+}
+
 
 h1 {
   font-size: 42px;

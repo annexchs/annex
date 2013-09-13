@@ -28,6 +28,9 @@
 .greenbkg {
   background-color: #96c758;
 }
+.purplebkg {
+  background-color: #9369a6;
+}
 .logo,
 .slogan {
   position: absolute;
@@ -409,6 +412,8 @@ h3 {
 }
 .modal p {
   color: #FFFFFF;
+  font-size: 1.4em;
+  font-weight: 300;
 }
 .modal a:link,
 .modal a:visited {

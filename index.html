@@ -12,13 +12,14 @@
 	<link href="stylesheets/carousel.css" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="js/carousel.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
 	
 
 </head>
 
 <body>
+
+<div class="caption-background purplebkg"></div>
 
 <div id="carousel-main" class="carousel slide" data-interval="false">
   <!-- Indicators -->
@@ -144,7 +145,7 @@
           <h1 class="modal-title">about us</h4>
         </div>
         <div class="modal-body">
-          <p><span class="build">Annex build things.</span>
+          <p><span class="build">Annex builds things.</span>
 <br>But not the kind of things that you can touch.
 <br>We build things that touch you.
 <br>Your mind,
@@ -206,15 +207,16 @@
 		if (slideTo === 0) {
 	 		$( 'div.info a' ).addClass('border');
 	 		$( "div.slogan").fadeTo(200, 0);
-	 		$( ".logo" ).switchClass("logo-big", "logo-small", 600);
+	 		$( ".logo" ).switchClass("logo-big", "logo-small", 300);
   		} else {
 	  		$('#carousel-main').carousel(0);
+	  		$( 'div.info a' ).addClass('border');
   		};
 	});
 
 	$('#about').on('hide.bs.modal', function () {
 		if (modalActive != 3) {
-			$( ".logo" ).switchClass("logo-small", "logo-big", 600);
+			$( ".logo" ).switchClass("logo-small", "logo-big", 300);
 			$( "div.slogan").fadeTo(200, 1);
 		};
  		$( 'div.info a' ).removeClass('border');
@@ -230,15 +232,16 @@
 		if (slideTo === 0) {
 	 		$( 'div.mail a' ).addClass('border');
 	 		$( "div.slogan").fadeTo(200, 0);
-	 		$( ".logo" ).switchClass("logo-big", "logo-small", 600);
+	 		$( ".logo" ).switchClass("logo-big", "logo-small", 300);
   		} else {
 	  		$('#carousel-main').carousel(0);
+	  		$( 'div.mail a' ).addClass('border');
   		};
 	});
 
 	$('#contact').on('hide.bs.modal', function () {
 		if (modalActive != 3) {
-			$( ".logo" ).switchClass("logo-small", "logo-big", 600);
+			$( ".logo" ).switchClass("logo-small", "logo-big", 300);
 			$( "div.slogan").fadeTo(200, 1);
 		};
 		modalActive = 0;
@@ -270,21 +273,30 @@
 	$('#carousel-main').on('slide.bs.carousel',function(e){
 	    slideFrom = $(this).find('.active').index();
 	    slideTo = $(e.relatedTarget).index();
+	    $( "div.carousel-caption" ).fadeTo(50, 0);
 	    if (slideFrom===0 && slideTo >= 1 && modalActive === 0) {
-	    	$( ".logo" ).switchClass("logo-big", "logo-small", 600);
+	    	$( ".logo" ).switchClass("logo-big", "logo-small", 300);
 	    	$( "div.work a" ).addClass("border");
 	    	$( "div.slogan").fadeTo(200, 0);
+	    	$( "div.caption-background" ).addClass("caption-active");
 	    } else if (slideFrom===0 && slideTo >= 1 && modalActive > 0) {
 	    	$( "div.work a" ).addClass("border");
+	    	$( "div.caption-background" ).addClass("caption-active");
 	    } else if (slideFrom >= 1 && slideTo===0 && modalActive === 0) {
-	    	$( ".logo" ).switchClass("logo-small", "logo-big", 600);
+	    	$( ".logo" ).switchClass("logo-small", "logo-big", 300);
 	    	$( "div.work a" ).removeClass("border");
 	    	$( "div.slogan").fadeTo(200, 1);
+	    	$( "div.caption-background" ).removeClass("caption-active");
 	    } else if (slideFrom >= 1 && slideTo===0 && modalActive > 0) {
 	    	$( "div.work a" ).removeClass("border");
+	    	$( "div.caption-background" ).removeClass("caption-active");
 	    } else {
 	    	return;
-	    }
+	    };
+	});
+
+	$('#carousel-main').on('slid.bs.carousel', function(){
+		$('div.carousel-caption').fadeTo(200, 1);
 	});
 </script>
 
