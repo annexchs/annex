@@ -32,28 +32,64 @@
   list-style: none;
 }
 .carousel-control {
-  width: 46px;
-  height: 109px;
   position: absolute;
   top: 40%;
+}
+@media screen and (min-width: 768px) {
+  .carousel-control {
+    width: 46px;
+    height: 109px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .carousel-control {
+    width: 27.599999999999998px;
+    height: 65.39999999999999px;
+  }
 }
 .carousel-control.left {
   background-image: url("../images/hex-half-left.png");
 }
+@media screen and (max-width: 767px) {
+  .carousel-control.left {
+    background-size: 27.599999999999998px, 66px;
+  }
+}
 .carousel-control.right {
   background-image: url("../images/hex-half-right.png");
+}
+@media screen and (max-width: 767px) {
+  .carousel-control.right {
+    background-size: 27.599999999999998px, 66px;
+  }
 }
 .carousel-control .icon-prev,
 .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-left,
 .carousel-control .glyphicon-chevron-right {
   position: absolute;
-  top: 43px;
   left: 0;
   right: 0;
-  width: 46px;
   padding: 0;
   margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .carousel-control .icon-prev,
+  .carousel-control .icon-next,
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right {
+    width: 46px;
+    top: 43px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .carousel-control .icon-prev,
+  .carousel-control .icon-next,
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right {
+    width: 20px;
+    top: 22px;
+  }
 }
 .carousel-indicators li {
   display: inline-block;
@@ -104,10 +140,19 @@
   }
 }
 .caption-background {
-  height: 220px;
   left: 100%;
   -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
+}
+@media screen and (min-width: 768px) {
+  .caption-background {
+    height: 220px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .caption-background {
+    height: 150px;
+  }
 }
 @media screen and (min-width: 768px) {
   .caption-active {
@@ -119,24 +164,42 @@
     left: 0%;
   }
 }
-h1 {
-  font-size: 42px;
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 22px;
+  }
 }
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-@media (min-width: 768px) {
-  /* Bump up size of carousel content */
+@media screen and (min-width: 768px) {
   .carousel-caption p {
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.4;
   }
-  .featurette-heading {
-    font-size: 50px;
+}
+@media screen and (max-width: 767px) {
+  .carousel-caption p {
+    margin-bottom: 10px;
+    font-size: 10px;
+    line-height: 1.2;
   }
 }
-@media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 120px;
+@media screen and (min-width: 768px) {
+  .carousel-caption .btn {
+    font-size: 16px;
   }
+}
+@media screen and (max-width: 767px) {
+  .carousel-caption .btn {
+    font-size: 10px;
+  }
+}
+.featurette-heading {
+  font-size: 50px;
 }

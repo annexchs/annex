@@ -127,8 +127,8 @@ section {
   margin-top: 0;
   position: absolute;
   @media screen and (min-width: 768px) {
-    top:1.5em;
-    right:61%;
+    top:5em;
+    right:56%;
     width: 440px;
   }
   @media screen and (max-width: 767px) {
@@ -412,10 +412,10 @@ section {
 }
 
 @hex-height: 80px;
-@hex-width: (@hex-height * 1.73205);
+@hex-width: (@hex-height * 1.732);
 
 @hex-height-small: 35px;
-@hex-width-small: (@hex-height-small * 1.73205);
+@hex-width-small: (@hex-height-small * 1.732);
 
 @offset: 75px;
 @offset-small: 33px;
@@ -461,29 +461,29 @@ section {
   }
 }
 
-.hex-transform (@trans1; @trans2) {
-  -webkit-transform: rotate(-60deg) translate(@trans1, @trans2);
-  -moz-transform: rotate(-60deg) translate(@trans1, @trans2);
-  -ms-transform: rotate(-60deg) translate(@trans1, @trans2);
-  -o-transform: rotate(-60deg) translate(@trans1, @trans2);
-  transform: rotate(-60deg) translate(@trans1, @trans2);
+.hex-transform (@rot; @trans1; @trans2) {
+  -webkit-transform: rotate(@rot) translate(@trans1, @trans2);
+  -moz-transform: rotate(@rot) translate(@trans1, @trans2);
+  -ms-transform: rotate(@rot) translate(@trans1, @trans2);
+  -o-transform: rotate(@rot) translate(@trans1, @trans2);
+  transform: rotate(@rot) translate(@trans1, @trans2);
 }
 
 .list-hex-grid.large div.hex .hex-1:before {
   @media screen and (min-width: 768px) {
-    .hex-transform(-80px; 0);
+    .hex-transform(-60deg; -80px; 0);
   }
   @media screen and (max-width: 767px) {
-    .hex-transform(@hex-height-small; 0);
+    .hex-transform(-60deg; hex-height-small; 0);
   }
 }
 
 .list-hex-grid.large div.hex .hex-2:before {
   @media screen and (min-width: 768px) {
-    .hex-transform(30px; 30px);
+    .hex-transform(60deg; 160px; 160px);
   }
   @media screen and (max-width: 767px) {
-    .hex-transform(-(@hex-height-small * 2); (@hex-height-small * 2));
+    .hex-transform(60deg; -(@hex-height-small * 2); (@hex-height-small * 2));
   }
 }
 

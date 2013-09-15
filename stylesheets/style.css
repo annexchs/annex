@@ -113,8 +113,8 @@ section {
 }
 @media screen and (min-width: 768px) {
   .section {
-    top: 1.5em;
-    right: 61%;
+    top: 5em;
+    right: 56%;
     width: 440px;
   }
 }
@@ -370,12 +370,12 @@ section {
 }
 @media screen and (min-width: 768px) {
   .grid-1 {
-    width: 138.56400000000002px;
+    width: 138.56px;
   }
 }
 @media screen and (max-width: 767px) {
   .grid-1 {
-    width: 60.621750000000006px;
+    width: 60.62px;
   }
 }
 .grid-1.large {
@@ -423,29 +423,29 @@ section {
 }
 @media screen and (max-width: 767px) {
   .list-hex-grid.large div.hex .hex-1:before {
-    -webkit-transform: rotate(-60deg) translate(35px, 0);
-    -moz-transform: rotate(-60deg) translate(35px, 0);
-    -ms-transform: rotate(-60deg) translate(35px, 0);
-    -o-transform: rotate(-60deg) translate(35px, 0);
-    transform: rotate(-60deg) translate(35px, 0);
+    -webkit-transform: rotate(-60deg) translate(hex-height-small, 0);
+    -moz-transform: rotate(-60deg) translate(hex-height-small, 0);
+    -ms-transform: rotate(-60deg) translate(hex-height-small, 0);
+    -o-transform: rotate(-60deg) translate(hex-height-small, 0);
+    transform: rotate(-60deg) translate(hex-height-small, 0);
   }
 }
 @media screen and (min-width: 768px) {
   .list-hex-grid.large div.hex .hex-2:before {
-    -webkit-transform: rotate(-60deg) translate(30px, 30px);
-    -moz-transform: rotate(-60deg) translate(30px, 30px);
-    -ms-transform: rotate(-60deg) translate(30px, 30px);
-    -o-transform: rotate(-60deg) translate(30px, 30px);
-    transform: rotate(-60deg) translate(30px, 30px);
+    -webkit-transform: rotate(60deg) translate(160px, 160px);
+    -moz-transform: rotate(60deg) translate(160px, 160px);
+    -ms-transform: rotate(60deg) translate(160px, 160px);
+    -o-transform: rotate(60deg) translate(160px, 160px);
+    transform: rotate(60deg) translate(160px, 160px);
   }
 }
 @media screen and (max-width: 767px) {
   .list-hex-grid.large div.hex .hex-2:before {
-    -webkit-transform: rotate(-60deg) translate(-70px, 70px);
-    -moz-transform: rotate(-60deg) translate(-70px, 70px);
-    -ms-transform: rotate(-60deg) translate(-70px, 70px);
-    -o-transform: rotate(-60deg) translate(-70px, 70px);
-    transform: rotate(-60deg) translate(-70px, 70px);
+    -webkit-transform: rotate(60deg) translate(-70px, 70px);
+    -moz-transform: rotate(60deg) translate(-70px, 70px);
+    -ms-transform: rotate(60deg) translate(-70px, 70px);
+    -o-transform: rotate(60deg) translate(-70px, 70px);
+    transform: rotate(60deg) translate(-70px, 70px);
   }
 }
 @media screen and (min-width: 768px) {
