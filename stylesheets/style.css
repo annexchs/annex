@@ -34,26 +34,64 @@
 .logo,
 .slogan {
   position: absolute;
-  bottom: 5em;
 }
-.slogan {
-  width: 257px;
-  height: 98px;
-  right: 80px;
+@media screen and (min-width: 768px) {
+  .slogan {
+    width: 257px;
+    height: 98px;
+    right: 80px;
+    bottom: 5em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .slogan {
+    width: 89.94999999999999px;
+    height: 34.3px;
+    left: 80px;
+    right: 0;
+    bottom: 2.5em;
+    margin: 0px auto;
+  }
 }
 .logo-img {
   width: 100%;
   height: 100%;
 }
-.logo-big {
-  width: 392px;
-  height: 98px;
-  right: 337px;
+@media screen and (min-width: 768px) {
+  .logo-big {
+    width: 392px;
+    height: 98px;
+    right: 337px;
+    bottom: 5em;
+  }
 }
-.logo-small {
-  width: 235.2px;
-  height: 58.8px;
-  right: 66%;
+@media screen and (max-width: 767px) {
+  .logo-big {
+    width: 156.8px;
+    height: 39.2px;
+    left: 0;
+    right: 0;
+    bottom: 4em;
+    margin: 0px auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo-small {
+    width: 235.2px;
+    height: 58.8px;
+    right: 66%;
+    bottom: 5em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .logo-small {
+    width: 156.8px;
+    height: 39.2px;
+    left: 0;
+    right: 0;
+    bottom: 4em;
+    margin: 0px auto;
+  }
 }
 .hex-menu {
   position: relative;
@@ -72,15 +110,39 @@ section {
 .section {
   margin-top: 0;
   position: absolute;
-  top: 1.5em;
-  right: 61%;
 }
-h3 {
+@media screen and (min-width: 768px) {
+  .section {
+    top: 1.5em;
+    right: 61%;
+    width: 440px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section {
+    top: 3em;
+    width: 210px;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+    padding-left: 10px;
+  }
+}
+.section h3 {
   margin: 0em;
   font-weight: 400;
-  font-size: 20px;
   padding-top: 1.5em;
   padding-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .section h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section h3 {
+    display: none;
+  }
 }
 .btn {
   font-weight: 800;
@@ -104,8 +166,7 @@ h3 {
   opacity: 0;
 }
 .list-hex-grid {
-  margin-top: 36px;
-  margin-bottom: 36px;
+  margin: 0;
   font-size: 0px;
   word-spacing: 1px;
   word-spacing: 0;
@@ -132,33 +193,6 @@ h3 {
   float: none;
   position: relative;
   z-index: 10;
-}
-.list-hex-grid div.hex > a,
-.list-hex-grid div.hex > div {
-  height: 80px;
-  line-height: 160px;
-}
-.list-hex-grid div.hex .inner {
-  top: -16px;
-}
-.list-hex-grid div.hex .hex-1:before,
-.list-hex-grid div.hex .hex-2:before {
-  height: 160px;
-  width: 160px;
-}
-.list-hex-grid div.hex .hex-1:before {
-  -webkit-transform: rotate(-60deg) translate(-110px, 0);
-  -moz-transform: rotate(-60deg) translate(-110px, 0);
-  -ms-transform: rotate(-60deg) translate(-110px, 0);
-  -o-transform: rotate(-60deg) translate(-110px, 0);
-  transform: rotate(-60deg) translate(-110px, 0);
-}
-.list-hex-grid div.hex .hex-2:before {
-  -webkit-transform: rotate(60deg) translate(40px, 40px);
-  -moz-transform: rotate(60deg) translate(40px, 40px);
-  -ms-transform: rotate(60deg) translate(40px, 40px);
-  -o-transform: rotate(60deg) translate(40px, 40px);
-  transform: rotate(60deg) translate(40px, 40px);
 }
 .list-hex-grid div.hex > a,
 .list-hex-grid div.hex > div {
@@ -316,45 +350,135 @@ h3 {
 .hovered {
   opacity: 30%;
 }
-.list-hex-grid.large div.hex {
-  margin-top: 24px;
-  margin-bottom: 24px;
-  margin-top: 39px;
-  margin-bottom: 10px;
+@media screen and (min-width: 768px) {
+  .list-hex-grid.large div.hex {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
 }
-.list-hex-grid.large div.hex > a,
-.list-hex-grid.large div.hex > div {
-  height: 80px;
-  line-height: 160px;
+@media screen and (max-width: 767px) {
+  .list-hex-grid.large div.hex {
+    margin-top: 11px;
+    margin-bottom: 11px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .grid-1 {
+    width: 138.56400000000002px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .grid-1 {
+    width: 60.621750000000006px;
+  }
+}
+.grid-1.large {
+  width: 325px;
+}
+@media screen and (min-width: 768px) {
+  .list-hex-grid.large div.hex > a,
+  .list-hex-grid.large div.hex > div {
+    height: 80px;
+    line-height: 160px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .list-hex-grid.large div.hex > a,
+  .list-hex-grid.large div.hex > div {
+    height: 35px;
+    line-height: 160px;
+  }
 }
 .list-hex-grid.large div.hex .inner {
   top: 0px;
 }
-.list-hex-grid.large div.hex .hex-1:before,
-.list-hex-grid.large div.hex .hex-2:before {
-  height: 160px;
-  width: 160px;
+@media screen and (min-width: 768px) {
+  .list-hex-grid.large div.hex .hex-1:before,
+  .list-hex-grid.large div.hex .hex-2:before {
+    height: 160px;
+    width: 160px;
+  }
 }
-.list-hex-grid.large div.hex .hex-1:before {
-  -webkit-transform: rotate(-60deg) translate(-80px, 0);
-  -moz-transform: rotate(-60deg) translate(-80px, 0);
-  -ms-transform: rotate(-60deg) translate(-80px, 0);
-  -o-transform: rotate(-60deg) translate(-80px, 0);
-  transform: rotate(-60deg) translate(-80px, 0);
+@media screen and (max-width: 767px) {
+  .list-hex-grid.large div.hex .hex-1:before,
+  .list-hex-grid.large div.hex .hex-2:before {
+    height: 70px;
+    width: 70px;
+  }
 }
-.list-hex-grid.large div.hex .hex-2:before {
-  -webkit-transform: rotate(60deg) translate(30px, 30px);
-  -moz-transform: rotate(60deg) translate(30px, 30px);
-  -ms-transform: rotate(60deg) translate(30px, 30px);
-  -o-transform: rotate(60deg) translate(30px, 30px);
-  transform: rotate(60deg) translate(30px, 30px);
+@media screen and (min-width: 768px) {
+  .list-hex-grid.large div.hex .hex-1:before {
+    -webkit-transform: rotate(-60deg) translate(-80px, 0);
+    -moz-transform: rotate(-60deg) translate(-80px, 0);
+    -ms-transform: rotate(-60deg) translate(-80px, 0);
+    -o-transform: rotate(-60deg) translate(-80px, 0);
+    transform: rotate(-60deg) translate(-80px, 0);
+  }
 }
-.list-hex-grid.large div.hex > a,
-.list-hex-grid.large div.hex > div {
-  -webkit-background-size: auto 300px;
-  -moz-background-size: auto 300px;
-  -o-background-size: auto 300px;
-  background-size: auto 300px;
+@media screen and (max-width: 767px) {
+  .list-hex-grid.large div.hex .hex-1:before {
+    -webkit-transform: rotate(-60deg) translate(35px, 0);
+    -moz-transform: rotate(-60deg) translate(35px, 0);
+    -ms-transform: rotate(-60deg) translate(35px, 0);
+    -o-transform: rotate(-60deg) translate(35px, 0);
+    transform: rotate(-60deg) translate(35px, 0);
+  }
+}
+@media screen and (min-width: 768px) {
+  .list-hex-grid.large div.hex .hex-2:before {
+    -webkit-transform: rotate(-60deg) translate(30px, 30px);
+    -moz-transform: rotate(-60deg) translate(30px, 30px);
+    -ms-transform: rotate(-60deg) translate(30px, 30px);
+    -o-transform: rotate(-60deg) translate(30px, 30px);
+    transform: rotate(-60deg) translate(30px, 30px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .list-hex-grid.large div.hex .hex-2:before {
+    -webkit-transform: rotate(-60deg) translate(-70px, 70px);
+    -moz-transform: rotate(-60deg) translate(-70px, 70px);
+    -ms-transform: rotate(-60deg) translate(-70px, 70px);
+    -o-transform: rotate(-60deg) translate(-70px, 70px);
+    transform: rotate(-60deg) translate(-70px, 70px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .list-hex-grid.large div.hex > a,
+  .list-hex-grid.large div.hex > div {
+    -webkit-background-size: auto 300px;
+    -moz-background-size: auto 300px;
+    -o-background-size: auto 300px;
+    background-size: auto 300px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .list-hex-grid.large div.hex > a,
+  .list-hex-grid.large div.hex > div {
+    -webkit-background-size: auto 132px;
+    -moz-background-size: auto 132px;
+    -o-background-size: auto 132px;
+    background-size: auto 132px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .offset {
+    margin-left: 75px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .offset {
+    margin-left: 33px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ideas {
+    margin-left: 75px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ideas {
+    margin-left: 0px;
+  }
 }
 .clearfix,
 .container,
@@ -368,30 +492,32 @@ h3 {
   display: table;
   clear: both;
 }
-.grid-4 {
+.grid-1 {
   float: left;
   display: inline;
-  margin-left: 5px;
-  margin-right: 5px;
   position: relative;
 }
-.grid-4.alpha {
+@media screen and (min-width: 768px) {
+  .grid-1 {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .grid-1 {
+    margin-right: 5px;
+  }
+}
+.grid-1.alpha {
   margin-left: 0;
 }
-.grid-4.omega {
+.grid-1.omega {
   margin-right: 0;
 }
-.grid-4.center {
+.grid-1.center {
   float: none;
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-.grid-4 {
-  width: 138px;
-}
-.grid-4.large {
-  width: 325px;
 }
 .list-hex-grid div.hex.tertiary > a,
 .list-hex-grid div.hex.tertiary > div {
@@ -401,19 +527,52 @@ h3 {
   background-color: #bfbfbf;
   border-color: #bfbfbf;
 }
-.offset {
-  margin-left: 79px;
+@media screen and (max-width: 767px) {
+  div.modal-header > button.close {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal-content {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal-content {
+    height: auto;
+  }
 }
 .modal h1 {
   color: #FFFFFF;
-  font-size: 80px;
   font-weight: 300;
   padding-top: 30px;
 }
+@media screen and (min-width: 768px) {
+  .modal h1 {
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal h1 {
+    font-size: 40px;
+    margin-top: 100px;
+  }
+}
 .modal p {
   color: #FFFFFF;
-  font-size: 1.4em;
   font-weight: 300;
+}
+@media screen and (min-width: 768px) {
+  .modal p {
+    font-size: 1.4em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal p {
+    font-size: 1em;
+  }
 }
 .modal a:link,
 .modal a:visited {
@@ -427,10 +586,18 @@ h3 {
   border-bottom: 1.5px #FFFFFF dashed;
 }
 .build {
-  font-size: 30px;
+  font-size: 1.5em;
   font-weight: normal;
 }
-.modal-body {
-  height: 70%;
-  overflow: auto;
+@media screen and (min-width: 768px) {
+  .modal-body {
+    height: 70%;
+    overflow: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal-body {
+    height: auto;
+    padding-top: 0px;
+  }
 }
