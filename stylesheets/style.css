@@ -423,11 +423,11 @@ section {
 }
 @media screen and (max-width: 767px) {
   .list-hex-grid.large div.hex .hex-1:before {
-    -webkit-transform: rotate(-60deg) translate(hex-height-small, 0);
-    -moz-transform: rotate(-60deg) translate(hex-height-small, 0);
-    -ms-transform: rotate(-60deg) translate(hex-height-small, 0);
-    -o-transform: rotate(-60deg) translate(hex-height-small, 0);
-    transform: rotate(-60deg) translate(hex-height-small, 0);
+    -webkit-transform: rotate(-60deg) translate(35px, 0);
+    -moz-transform: rotate(-60deg) translate(35px, 0);
+    -ms-transform: rotate(-60deg) translate(35px, 0);
+    -o-transform: rotate(-60deg) translate(35px, 0);
+    transform: rotate(-60deg) translate(35px, 0);
   }
 }
 @media screen and (min-width: 768px) {
@@ -460,10 +460,10 @@ section {
 @media screen and (max-width: 767px) {
   .list-hex-grid.large div.hex > a,
   .list-hex-grid.large div.hex > div {
-    -webkit-background-size: auto 132px;
-    -moz-background-size: auto 132px;
-    -o-background-size: auto 132px;
-    background-size: auto 132px;
+    -webkit-background-size: auto 131px;
+    -moz-background-size: auto 131px;
+    -o-background-size: auto 131px;
+    background-size: auto 131px;
   }
 }
 @media screen and (min-width: 768px) {
