@@ -4852,9 +4852,9 @@ body.modal-open,
   z-index: 1040;
 }
 .modal.fade .modal-dialog {
-  -webkit-transform: translate(100%, 0);
-  -ms-transform: translate(100%, 0);
-  transform: translate(100%, 0);
+  -webkit-transform: translate(95%, 0);
+  -ms-transform: translate(95%, 0);
+  transform: translate(95%, 0);
   -webkit-transition: -webkit-transform 0.3s ease-out;
   -moz-transition: -moz-transform 0.3s ease-out;
   -o-transition: -o-transform 0.3s ease-out;

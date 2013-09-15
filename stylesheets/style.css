@@ -31,6 +31,9 @@
 .purplebkg {
   background-color: #9369a6;
 }
+body {
+  overflow-x: hidden;
+}
 .logo,
 .slogan {
   position: absolute;
@@ -114,7 +117,7 @@ section {
 @media screen and (min-width: 768px) {
   .section {
     top: 5em;
-    right: 56%;
+    left: 12%;
     width: 440px;
   }
 }
