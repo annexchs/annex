@@ -49,13 +49,23 @@ body {
 
 .logo, .slogan {
 	position: absolute;
-	bottom:5em;
 }
 
 .slogan {
-  width: 257px;
-  height:98px;
-  right:80px;
+  @media screen and (min-width: 768px) {
+    width: 257px;
+    height: 98px;
+    right: 80px;
+    bottom: 5em;
+  }
+  @media screen and (max-width: 767px) {
+    width: 257px * .35;
+    height: 98px * .35;
+    left: 80px;
+    right: 0;
+    bottom: 2.5em;
+    margin: 0px auto;
+  }
 }
 
 .logo-img {
@@ -64,15 +74,37 @@ body {
 }
 
 .logo-big {
-  width:392px;
-  height: 98px;
-  right: 80+257px;
+  @media screen and (min-width: 768px) {
+    width: 392px;
+    height: 98px;
+    right: 80+257px;
+    bottom: 5em;
+  }
+  @media screen and (max-width: 767px) {
+    width: 392px * .4;
+    height: 98px * .4;
+    left: 0;
+    right: 0;
+    bottom: 4em;
+    margin: 0px auto;
+  }
 }
 
 .logo-small {
-  width:392*.6px;
-  height: 98*.6px;
-  right:66%;
+  @media screen and (min-width: 768px) {
+    width:392*.6px;
+    height: 98*.6px;
+    right:66%;
+    bottom: 5em;
+  }
+  @media screen and (max-width: 767px) {
+    width: 392px * .4;
+    height: 98px * .4;
+    left: 0;
+    right: 0;
+    bottom: 4em;
+    margin: 0px auto;
+  }
 }
 
 .hex-menu {
@@ -94,16 +126,32 @@ section {
 .section {
   margin-top: 0;
   position: absolute;
-  top:1.5em;
-  right:61%;
+  @media screen and (min-width: 768px) {
+    top:1.5em;
+    right:61%;
+    width: 440px;
+  }
+  @media screen and (max-width: 767px) {
+    top:3em;
+    width:210px;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+    padding-left: 10px;
+  }
 }
 
-h3 {
+.section h3 {
   margin: 0em;
   font-weight: 400;
-  font-size: 20px;
   padding-top:1.5em;
   padding-bottom:10px;
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .btn {
@@ -131,8 +179,7 @@ h3 {
 }
 
 .list-hex-grid {
-  margin-top: 36px;
-  margin-bottom: 36px;
+  margin:0;
   font-size: 0px;
   word-spacing: 1px;
   word-spacing: 0;
@@ -161,38 +208,6 @@ h3 {
   float: none;
   position: relative;
   z-index: 10;
-}
-
-.list-hex-grid div.hex > a,
-.list-hex-grid div.hex > div {
-  height: 80px;
-  line-height: 160px;
-}
-
-.list-hex-grid div.hex .inner {
-  top: -16px;
-}
-
-.list-hex-grid div.hex .hex-1:before,
-.list-hex-grid div.hex .hex-2:before {
-  height: 160px;
-  width: 160px;
-}
-
-.list-hex-grid div.hex .hex-1:before {
-  -webkit-transform: rotate(-60deg) translate(-110px, 0);
-  -moz-transform: rotate(-60deg) translate(-110px, 0);
-  -ms-transform: rotate(-60deg) translate(-110px, 0);
-  -o-transform: rotate(-60deg) translate(-110px, 0);
-  transform: rotate(-60deg) translate(-110px, 0);
-}
-
-.list-hex-grid div.hex .hex-2:before {
-  -webkit-transform: rotate(60deg) translate(40px, 40px);
-  -moz-transform: rotate(60deg) translate(40px, 40px);
-  -ms-transform: rotate(60deg) translate(40px, 40px);
-  -o-transform: rotate(60deg) translate(40px, 40px);
-  transform: rotate(60deg) translate(40px, 40px);
 }
 
 .list-hex-grid div.hex > a,
@@ -386,16 +401,48 @@ h3 {
 
 
 .list-hex-grid.large div.hex {
-  margin-top: 24px;
-  margin-bottom: 24px;
-  margin-top: 39px;
-  margin-bottom: 10px;
+  @media screen and (min-width: 768px) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 11px;
+    margin-bottom: 11px;
+  }
+}
+
+@hex-height: 80px;
+@hex-width: (@hex-height * 1.73205);
+
+@hex-height-small: 35px;
+@hex-width-small: (@hex-height-small * 1.73205);
+
+@offset: 75px;
+@offset-small: 33px;
+
+.grid-1 {
+  @media screen and (min-width: 768px) {
+    width: @hex-width;
+  }
+  @media screen and (max-width: 767px) {
+    width: @hex-width-small;
+  }
+}
+
+.grid-1.large {
+  width: 325px;
 }
 
 .list-hex-grid.large div.hex > a,
 .list-hex-grid.large div.hex > div {
-  height: 80px;
-  line-height: 160px;
+  @media screen and (min-width: 768px) {
+    height: @hex-height;
+    line-height: 160px;
+  }
+  @media screen and (max-width: 767px) {
+    height: @hex-height-small;
+    line-height: 160px;
+  }
 }
 
 .list-hex-grid.large div.hex .inner {
@@ -404,32 +451,74 @@ h3 {
 
 .list-hex-grid.large div.hex .hex-1:before,
 .list-hex-grid.large div.hex .hex-2:before {
-  height:160px;
-  width: 160px;
+  @media screen and (min-width: 768px) {
+    height:(@hex-height * 2);
+    width: (@hex-height * 2);
+  }
+  @media screen and (max-width: 767px) {
+    height:(@hex-height-small * 2);
+    width: (@hex-height-small * 2);
+  }
+}
+
+.hex-transform (@trans1; @trans2) {
+  -webkit-transform: rotate(-60deg) translate(@trans1, @trans2);
+  -moz-transform: rotate(-60deg) translate(@trans1, @trans2);
+  -ms-transform: rotate(-60deg) translate(@trans1, @trans2);
+  -o-transform: rotate(-60deg) translate(@trans1, @trans2);
+  transform: rotate(-60deg) translate(@trans1, @trans2);
 }
 
 .list-hex-grid.large div.hex .hex-1:before {
-  -webkit-transform: rotate(-60deg) translate(-80px, 0);
-  -moz-transform: rotate(-60deg) translate(-80px, 0);
-  -ms-transform: rotate(-60deg) translate(-80px, 0);
-  -o-transform: rotate(-60deg) translate(-80px, 0);
-  transform: rotate(-60deg) translate(-80px, 0);
+  @media screen and (min-width: 768px) {
+    .hex-transform(-80px; 0);
+  }
+  @media screen and (max-width: 767px) {
+    .hex-transform(@hex-height-small; 0);
+  }
 }
 
 .list-hex-grid.large div.hex .hex-2:before {
-  -webkit-transform: rotate(60deg) translate(30px, 30px);
-  -moz-transform: rotate(60deg) translate(30px, 30px);
-  -ms-transform: rotate(60deg) translate(30px, 30px);
-  -o-transform: rotate(60deg) translate(30px, 30px);
-  transform: rotate(60deg) translate(30px, 30px);
+  @media screen and (min-width: 768px) {
+    .hex-transform(30px; 30px);
+  }
+  @media screen and (max-width: 767px) {
+    .hex-transform(-(@hex-height-small * 2); (@hex-height-small * 2));
+  }
 }
 
+.hex-bkg-size (@bkgwidth) {
+  -webkit-background-size: auto @bkgwidth;
+  -moz-background-size: auto @bkgwidth;
+  -o-background-size: auto @bkgwidth;
+  background-size: auto @bkgwidth;
+}
 .list-hex-grid.large div.hex > a,
 .list-hex-grid.large div.hex > div {
-  -webkit-background-size: auto 300px;
-  -moz-background-size: auto 300px;
-  -o-background-size: auto 300px;
-  background-size: auto 300px;
+   @media screen and (min-width: 768px) {
+    .hex-bkg-size(300px);
+  }
+   @media screen and (max-width: 767px) {
+    .hex-bkg-size(132px);
+  }
+}
+
+.offset {
+  @media screen and (min-width: 768px) {
+    margin-left: @offset;
+  }
+  @media screen and (max-width: 767px) {
+    margin-left: @offset-small;
+  }
+}
+
+.ideas {
+  @media screen and (min-width: 768px) {
+    margin-left: @offset;
+  }
+  @media screen and (max-width: 767px) {
+    margin-left:0px;
+  }
 }
 
 .clearfix,
@@ -446,35 +535,31 @@ h3 {
   clear: both;
 }
 
-.grid-4 {
+.grid-1 {
   float: left;
   display: inline;
-  margin-left: 5px;
-  margin-right: 5px;
   position: relative;
+   @media screen and (min-width: 768px) {
+    margin-right: 10px;
+  }
+   @media screen and (max-width: 767px) {
+    margin-right: 5px;
+  }
 }
 
-.grid-4.alpha {
+.grid-1.alpha {
   margin-left: 0;
 }
 
-.grid-4.omega{
+.grid-1.omega{
   margin-right: 0;
 }
 
-.grid-4.center{
+.grid-1.center{
   float: none;
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.grid-4 {
-  width: 138px;
-}
-
-.grid-4.large {
-  width: 325px;
 }
 
 .list-hex-grid div.hex.tertiary > a,
@@ -487,25 +572,45 @@ h3 {
   border-color: #bfbfbf;
 }
 
-.offset {
-	margin-left:79px;
+@media screen and (max-width: 767px) {
+  div.modal-header > button.close {
+    position: fixed;
+    top:10px;
+    right:20px;
+  }
 }
 
-.modal {
-
+.modal-content {
+  @media screen and (min-width: 768px) {
+    height: 100%;
+  }
+  @media screen and (max-width: 767px) {
+    height: auto;
+  }
 }
 
 .modal h1 {
   color: #FFFFFF;
-  font-size: 80px;
   font-weight: 300;
   padding-top: 30px;
+  @media screen and (min-width: 768px) {
+    font-size: 80px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    margin-top: 100px;
+  }
 }
 
 .modal p {
   color: #FFFFFF;
-  font-size: 1.4em;
   font-weight: 300;
+  @media screen and (min-width: 768px) {
+    font-size: 1.4em;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 1em;
+  }
 }
 
 .modal a:link, .modal a:visited {
@@ -521,12 +626,18 @@ h3 {
 }
 
 .build {
-  font-size: 30px;
+  font-size: 1.5em;
   font-weight: normal;
 }
 
 .modal-body {
-  height: 70%;
-  overflow: auto;
+  @media screen and (min-width: 768px) {
+    height: 70%;
+    overflow: auto;
+  }
+  @media screen and (max-width: 767px) {
+    height: auto;
+    padding-top: 0px;
+  }
 }
 
