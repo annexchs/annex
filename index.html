@@ -4,7 +4,7 @@
 	<title>Annex</title>
 	<meta name="description" content="Annex Studio, Ltd. Charleston, SC">
 	<meta name="keywords" content="annex, studio, web design, charleston, graphic design">
-	<meta name="author" content="Annex Studio, Ltd. - Charleston, S.C."
+	<meta name="author" content="Annex Studio, Ltd. - Charleston, S.C.">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -39,7 +39,7 @@
       <img src="images/cistern-yard.jpg" alt="...">
         <div class="carousel-caption">
           <h1>cisternyard.com</h1>
-          <p>Flagship multimedia portal for College of Charleston student media organizations. Built using open-source technolgies, and a completely custom design.</p>
+          <p>Flagship multimedia portal for College of Charleston student media organizations. Built using open-source technologies, and a completely custom design.</p>
           <p><a class="btn btn-default" href="http://old.cisternyard.com" target="_blank">Visit site &rarr;</a></p>
         </div>
     </div>
@@ -67,9 +67,9 @@
 <section class="section interactive" data-interactive>
     <div class="list-hex-grid large clearfix">
 		<div class="hex grid-4 offset info">
-		    <a data-toggle="modal" href="#about" class="flex">
+		    <a data-toggle="modal" href="#about" class="">
 		        <div class="inner regular">
-		            <h3 class="flex">about</h3>
+		            <h3 class="">about</h3>
 		        </div>
 		            
 		        <div class="hex-1"><span class="after regular"></span></div>
@@ -79,9 +79,9 @@
 		</div>
 
 		<div class="hex grid-4 work">
-		    <a href="#" title="Work" class="flex">
+		    <a href="#" title="Work" class="">
 		        <div class="inner regular">
-		            <h3 class="flex">work</h3>
+		            <h3 class="">work</h3>
 		        </div>
 		            
 		        <div class="hex-1"><span class="after regular"></span></div>
@@ -91,9 +91,9 @@
 		</div>
 
 	<br/><div class="hex grid-4 mail">
-	    <a data-toggle="modal" href="#contact" class="flex">
+	    <a data-toggle="modal" href="#contact" class="">
 	        <div class="inner regular">
-	            <h3 class="flex">contact</h3>
+	            <h3 class="">contact</h3>
 	        </div>
 	            
 	        <div class="hex-1"><span class="after regular"></span></div>
@@ -103,7 +103,7 @@
 	</div>
 
 	<div class="hex grid-4 annex">
-	    <a href="#" style="background-image: url(images/annex-bkg.png);" title="annex" class="flex">
+	    <a href="#" title="annex" class"">
 	        
 	            
 	        <div class="hex-1"><span class="after regular"></span></div>
@@ -114,9 +114,9 @@
 
 	<br/>
 	<div class="hex grid-4 offset ideas">
-	    <a href="http://annexstudio.tumblr.com" target="_blank" style="background-image: url(images/bulb-bkg.png);" title="Ideas" class="flex">
+	    <a href="http://annexstudio.tumblr.com" target="_blank" style="background-image: url(images/bulb-bkg.png);" title="Ideas" class="">
 	        <div class="inner regular">
-	            <h3 class="flex">ideas</h3>
+	            <h3 class="">ideas</h3>
 	        </div>
 	            
 	        <div class="hex-1"><span class="after regular"></span></div>
@@ -146,7 +146,7 @@
         </div>
         <div class="modal-body">
           <p><span class="build">Annex builds things.</span>
-<br>But not the kind of things that you can touch.
+<br>Not the kind of things that you can touch.
 <br>We build things that touch you.
 <br>Your mind,
 <br>your heart,
@@ -197,8 +197,8 @@
 	var modalActive = 0;
 	var slideTo = 0;
 	var slideFrom = 0;
-
 	$('#about').on('show.bs.modal', function () {
+		$("div.annex a").removeClass("border");
   		if (modalActive === 2) {
   			modalActive = 3;
   			$('#contact').modal('hide');
@@ -224,6 +224,7 @@
 	});
 
 	$('#contact').on('show.bs.modal', function () {
+		$("div.annex a").removeClass("border");
   		if (modalActive === 1) {
   			modalActive = 3;
   			$('#about').modal('hide');
@@ -249,6 +250,7 @@
 	});
 
 	$("div.work").click(function() {
+		$("div.annex a").removeClass("border");
 		$('#carousel-main').carousel('next');
 		if (modalActive === 1) {
 			modalActive = 3;
@@ -261,6 +263,7 @@
 
 	$("div.annex").click(function() {
 		$('#carousel-main').carousel(0);
+		$("div.annex a").addClass("border");
 		if (modalActive === 1) {
 			modalActive = 0;
 			$('#about').modal('hide');
@@ -270,10 +273,22 @@
 		};
 	});
 
+	$("div.ideas").click(function() {
+		$("div.annex a").removeClass("border");
+	});
+
+	// $("div.annex a").mouseover(function() {
+	// 	$(this).addClass("border");
+	// });
+
+	// $("div.annex a").mouseout(function() {
+	// 	$(this).removeClass("border");
+	// });
+
 	$('#carousel-main').on('slide.bs.carousel',function(e){
 	    slideFrom = $(this).find('.active').index();
 	    slideTo = $(e.relatedTarget).index();
-	    $( "div.carousel-caption" ).fadeTo(50, 0);
+	    $( "div.carousel-caption" ).fadeTo(15, 0);
 	    if (slideFrom===0 && slideTo >= 1 && modalActive === 0) {
 	    	$( ".logo" ).switchClass("logo-big", "logo-small", 300);
 	    	$( "div.work a" ).addClass("border");
@@ -282,11 +297,13 @@
 	    } else if (slideFrom===0 && slideTo >= 1 && modalActive > 0) {
 	    	$( "div.work a" ).addClass("border");
 	    	$( "div.caption-background" ).addClass("caption-active");
+	    	$("div.annex a").removeClass("border");
 	    } else if (slideFrom >= 1 && slideTo===0 && modalActive === 0) {
 	    	$( ".logo" ).switchClass("logo-small", "logo-big", 300);
 	    	$( "div.work a" ).removeClass("border");
 	    	$( "div.slogan").fadeTo(200, 1);
 	    	$( "div.caption-background" ).removeClass("caption-active");
+	    	$("div.annex a").addClass("border");
 	    } else if (slideFrom >= 1 && slideTo===0 && modalActive > 0) {
 	    	$( "div.work a" ).removeClass("border");
 	    	$( "div.caption-background" ).removeClass("caption-active");
