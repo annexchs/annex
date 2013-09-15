@@ -410,25 +410,48 @@ h3 {
   font-weight: 300;
   padding-top: 30px;
 }
+.modal h2 {
+  font-size: 30px;
+  color: #FFFFFF;
+  font-weight: normal;
+}
+.modal h3 {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 30px;
+}
+.category {
+  padding-right: 8px;
+  font-weight: 600;
+}
 .modal p {
   color: #FFFFFF;
   font-size: 1.4em;
   font-weight: 300;
 }
+.modal p.small {
+  color: #FFFFFF;
+  font-size: 1em;
+  font-weight: inherit;
+}
+.modal ul,
+.modal li {
+  color: #FFFFFF;
+  font-size: 1.1em;
+  font-weight: 300;
+  list-style: none;
+}
 .modal a:link,
 .modal a:visited {
   text-decoration: none;
-  font-weight: bold;
   text-transform: none;
+  border-bottom: 1.5px #FFFFFF dashed;
   color: #FFFFFF;
 }
 .modal a:hover {
   color: #FFFFFF;
-  border-bottom: 1.5px #FFFFFF dashed;
-}
-.build {
-  font-size: 30px;
-  font-weight: normal;
+  border-bottom: 1.5px #FFFFFF solid;
 }
 .modal-body {
   height: 70%;

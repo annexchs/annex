@@ -1,0 +1,24 @@
+Before we begin, please turn on this music: http://www.youtube.com/watch?v=YfANymVG3iE
+
+===
+
+Our website was produced today by Annex Studio, LLC in Charleston, S.C. The team is Brad Woods, Colin Johnson, Jason Parker, and Geoff Yost. Support for our firm comes from Twitter, who publishes Bootstrap (and distracts us while we work). LESS oversaw our sanity.
+
+Special Thanks to Dr. Antine E. Stenbit, M.D., Ph.D. (as well as Flip, Lulu and Ollie).
+
+And creative jealousy for our competitor, Fuzzco, who says:
+
+     "	.list-hex-grid div.hex .hex-1:before {
+            -webkit-transform: rotate(-60deg) translate(-110px, 0);
+            -moz-transform: rotate(-60deg) translate(-110px, 0);
+            -ms-transform: rotate(-60deg) translate(-110px, 0);
+            -o-transform: rotate(-60deg) translate(-110px, 0);
+            transform: rotate(-60deg) translate(-110px, 0); }
+
+            "
+
+Back next site with more pixels of This Annex Life.
+
+===
+
+www.annexstudio.com
