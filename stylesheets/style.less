@@ -599,6 +599,19 @@ section {
   }
 }
 
+.modal h2 {
+  font-size: 30px;
+  color: #FFFFFF;
+  font-weight: normal;
+}
+
+.modal h3 {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 30px;
+}
+
 .modal p {
   color: #FFFFFF;
   font-weight: 300;
@@ -610,31 +623,91 @@ section {
   }
 }
 
+.modal p.small {
+  color: #FFFFFF;
+  font-size: 1em;
+  font-weight: inherit;
+}
+
+.modal ul, .modal li {
+  color: #FFFFFF;
+  font-size: 1.1em;
+  font-weight: 300;
+  list-style: none;
+}
+
 .modal a:link, .modal a:visited {
   text-decoration: none;
-  font-weight: bold;
   text-transform: none;
   color: #FFFFFF;
 }
 
 .modal a:hover {
   color: #FFFFFF;
+}
+
+.modal p a:link, .modal p a:visited {
   border-bottom: 1.5px #FFFFFF dashed;
 }
 
-.build {
-  font-size: 1.5em;
-  font-weight: normal;
+.modal p a:hover {
+  border-bottom: 1.5px #FFFFFF solid;
+
 }
+  
 
 .modal-body {
-  @media screen and (min-width: 768px) {
-    height: 70%;
-    overflow: auto;
-  }
-  @media screen and (max-width: 767px) {
-    height: auto;
-    padding-top: 0px;
-  }
+  height: 70%;
+  overflow: auto;
 }
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot');
+  src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.icon-dribbble, .icon-twitter, .icon-facebook, .icon-tumblr, .icon-tumblr-2, .icon-dribbble-2, .icon-twitter-2, .icon-facebook-2 {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  z-index:100;
+}
+
+.icon-dribbble:before {
+  content: "\e001";
+}
+.icon-twitter:before {
+  content: "\e002";
+}
+.icon-facebook:before {
+  content: "\e003";
+}
+.icon-tumblr:before {
+  content: "\e000";
+}
+.icon-tumblr-2:before {
+  content: "\e004";
+}
+.icon-dribbble-2:before {
+  content: "\e005";
+}
+.icon-twitter-2:before {
+  content: "\e006";
+}
+.icon-facebook-2:before {
+  content: "\e007";
+}
+
 

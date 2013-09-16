@@ -28,7 +28,7 @@ position: absolute;
 top: 20px;
 right: 8%;
 z-index: 15;
-width:100px;
+width:auto;
 padding-left: 0;
 margin-left: -30%;
 text-align: center;
@@ -114,11 +114,13 @@ background-image: url("../images/hex-indicator-active.png");
     bottom: 20px;
     left: 45%;
     right: 0;
+    height:240px;
   }
   @media screen and (max-width: 767px) {
     bottom: 0;
     left: 0%;
     right: 0;
+    height:150px;
   }
 }
 
@@ -126,12 +128,6 @@ background-image: url("../images/hex-indicator-active.png");
   left:100%;
   -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
-  @media screen and (min-width: 768px) {
-    height:220px;
-  }
-  @media screen and (max-width: 767px) {
-    height:150px;
-  }
 }
 
 .caption-active {
