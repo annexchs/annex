@@ -31,9 +31,6 @@
 .purplebkg {
   background-color: #9369a6;
 }
-body {
-  overflow-x: hidden;
-}
 .logo,
 .slogan {
   position: absolute;
