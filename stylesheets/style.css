@@ -651,6 +651,7 @@ section {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   z-index: 100;
+  display: inline-block;
 }
 .icon-dribbble:before {
   content: "\e001";
