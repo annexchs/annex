@@ -603,6 +603,10 @@ section {
   font-weight: 300;
   list-style: none;
 }
+.category {
+  padding-right: 8px;
+  font-weight: 600;
+}
 .modal a:link,
 .modal a:visited {
   text-decoration: none;
